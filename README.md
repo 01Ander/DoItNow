@@ -1,8 +1,12 @@
+[![Notion](https://img.shields.io/badge/project-Notion-blue)](https://caramel-water-a59.notion.site/Todo-DoItNow-f7f39a7374a64df48e0ca380eab211fc)
+
 # Languages
 
 1. [English](#doitnow)
 2. [French](#doitnow-french)
 3. [Spanish](#doitnow-spanish)
+
+
 
 # DoItNow
 
