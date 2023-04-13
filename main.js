@@ -1,6 +1,7 @@
 import { configureIconDelete } from './public/js/_icon-delete';
 import { configureIconPlus } from './public/js/_icon-plus';
 import './public/js/_modal';
+import './public/js/_check';
 import './public/sass/_style.sass'
 
 
