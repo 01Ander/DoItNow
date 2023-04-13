@@ -11,3 +11,64 @@
     color: $md-sys-color-on-surface-variant-light
     &:hover
       border: 1px solid $md-sys-color-on-surface-light
+  &__list
+    display: flex
+    flex-direction: column
+    gap: 4px
+    margin-bottom: 40px
+  &__item
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 8px
+    padding: 8px 16px
+    border-radius: 12px
+    &:hover
+      background-color:  rgba($md-sys-color-on-surface-light , 0.08)
+      cursor: pointer
+    &-text
+      width: calc(100% - 100px)
+      display: flex
+      align-items: center
+      font-size: $md-sys-typescale-body-large-font-size
+      color: $md-sys-color-on-surface-light
+    .icon-detele__container
+      width: 24px
+      height: 24px
+      display: flex
+      justify-content: center
+      align-items: center
+      .main__item-icon-delete
+        display: block
+        width: 16px
+        height: 18px
+        background-position: center
+        background-repeat: no-repeat
+        background-size: cover
+
+.checkbox-container
+  width: 40px
+  height: 40px
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  .main__item-checbox
+    width: 18px
+    height: 18px
+    margin: 4px
+    accent-color: $md-sys-color-primary-light
+  .checkbox-hover
+    display: none
+    z-index: -1
+    width: 40px
+    height: 40px
+    position: absolute
+    top: 0px
+    left: 0px
+    border-radius: 100%
+  &:hover .checkbox-hover
+    background-color: rgba($md-sys-color-on-surface-light , 0.12)
+    display: block
+
