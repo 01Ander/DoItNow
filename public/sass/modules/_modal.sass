@@ -1,0 +1,57 @@
+.modal
+  width: 100%
+  height: 100%
+  position: fixed
+  z-index: 1
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  display: flex
+  justify-content: center
+  align-items: center
+  background: rgba($md-sys-color-on-primary-container-light , 0.16)
+  font-family: 'Monstserrat-Regular'
+  &__container
+    width: calc( 100% - 88px )
+    padding: 24px
+    display: flex
+    flex-direction: column
+    gap: 24px
+    border-radius: 24px
+    background-color: $md-sys-color-surface-container-high-light
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15)
+    .modal__title
+      font-size: $md-sys-typescale-headline-small-font-size
+    .modal__form
+      .modal__input
+        width: calc( 100% - 3.2rem )
+        resize: none
+        min-height: 100px
+        border-radius: 12px
+        border: none
+        font-family: 'Monstserrat-Regular'
+        padding: 1.6rem
+    .modal__container--buttons
+      display: flex
+      justify-content: end
+      gap: 8px
+      .modal__button--cancel
+        padding: 12px 24px
+        margin-left: 8px
+        border-radius: 12px
+        border: none
+        background-color: $md-sys-color-secondary-container-light
+        color: $md-sys-color-on-secondary-container-light
+        font-size: $md-sys-typescale-label-large-font-size
+      .modal__button--added
+        padding: 12px 24px
+        margin-left: 8px
+        border-radius: 12px
+        border: none
+        background-color: $md-sys-color-primary-light
+        color: $md-sys-color-on-primary-light
+        font-size: $md-sys-typescale-label-large-font-size
+
+.inactive
+  display: none
