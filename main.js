@@ -1,5 +1,6 @@
 import { configureIconDelete } from './public/js/_icon-delete';
 import { configureIconPlus } from './public/js/_icon-plus';
+import './public/js/_modal';
 import './public/sass/_style.sass'
 
 
@@ -9,5 +10,4 @@ function initApp() {
   configureIconPlus();
 }
 
-//listener for loading dom
 document.addEventListener('DOMContentLoaded', initApp());

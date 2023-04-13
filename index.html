@@ -47,11 +47,12 @@
         </li>
       </ul>
       <div class="main__container--button">
-        <div class="container__button--icon">
-          <span class="button--icon"></span>
-        </div>
-        <button class="main__button"></button>
-        <span class="button-hover"></span>
+        <button class="main__button">
+          <div class="container__button--icon">
+            <span class="button--icon"></span>
+          </div>
+          <span class="button-hover"></span>
+        </button>
       </div>
       <!-- Modal for add task -->
     </main>
@@ -62,8 +63,14 @@
           <textarea class="modal__input" placeholder="Add your new task"/></textarea>
         </form>
         <div class="modal__container--buttons">
-          <button class="modal__button--cancel"> Cancel </button>
-          <button class="modal__button--added"> Add task</button>
+          <button class="modal__button--cancel">
+            <span class="state-layer"></span>
+            Cancel
+          </button>
+          <button class="modal__button--added">
+            <span class="state-layer"></span>
+            Add task
+          </button>
         </div>
       </div>
     </section>

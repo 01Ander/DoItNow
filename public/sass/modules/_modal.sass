@@ -37,6 +37,10 @@
       justify-content: end
       gap: 8px
       .modal__button--cancel
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
         padding: 12px 24px
         margin-left: 8px
         border-radius: 12px
@@ -44,7 +48,23 @@
         background-color: $md-sys-color-secondary-container-light
         color: $md-sys-color-on-secondary-container-light
         font-size: $md-sys-typescale-label-large-font-size
+        cursor: pointer
+        &:hover
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15)
+        &:hover .state-layer
+          opacity: 1
+        .state-layer
+          opacity: 0
+          position: absolute
+          width: 100%
+          height: 100%
+          border-radius: 12px
+          background-color: rgba( $md-sys-color-on-secondary-container-light, 0.08 )
       .modal__button--added
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
         padding: 12px 24px
         margin-left: 8px
         border-radius: 12px
@@ -52,6 +72,17 @@
         background-color: $md-sys-color-primary-light
         color: $md-sys-color-on-primary-light
         font-size: $md-sys-typescale-label-large-font-size
-
+        cursor: pointer
+        &:hover
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15)
+        &:hover .state-layer
+          opacity: 1
+        .state-layer
+          opacity: 0
+          position: absolute
+          width: 100%
+          height: 100%
+          border-radius: 12px
+          background-color: rgba( $md-sys-color-on-primary-light, 0.08 )
 .inactive
   display: none
