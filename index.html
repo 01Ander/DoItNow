@@ -15,7 +15,7 @@
         <input type="text" name="task" class="main__input" placeholder="Find your task"/>
       </form>
       <ul class="main__list">
-        <li class="main__item">
+        <!-- <li class="main__item">
           <div class="checkbox-container">
             <input type="checkbox" class="main__item-checkbox">
             <span class="checkbox-hover"></span>
@@ -44,7 +44,7 @@
           <div class="icon-detele__container">
             <span class="main__item-icon-delete"></span>
           </div>
-        </li>
+        </li> -->
       </ul>
       <div class="main__container--button">
         <button class="main__button">
@@ -67,9 +67,21 @@
             <span class="state-layer"></span>
             Cancel
           </button>
-          <button class="modal__button--added">
+          <button class="modal__button--added" type="submit">
             <span class="state-layer"></span>
             Add task
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="modal__alert inactive">
+      <div class="modal__alert-container">
+        <h2 class="modal__alert-title">Alert</h2>
+        <p class="modal__alert-text">You can delete only checked tasks</p>
+        <div class="modal__alert-container--buttons">
+          <button class="modal__alert-button--cancel">
+            <span class="state-layer"></span>
+            Return
           </button>
         </div>
       </div>

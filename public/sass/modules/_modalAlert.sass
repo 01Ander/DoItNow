@@ -1,0 +1,51 @@
+.modal__alert
+  display: flex
+  justify-content: center
+  align-items: center
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.5)
+  z-index: 1
+  .modal__alert-container
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: 2.4rem
+    padding: 2.4rem 4.8rem
+    border-radius: 12px
+    background-color: $md-sys-color-error-container-light
+    color: $md-sys-color-on-error-container-light
+    .modal__alert-title
+      font-family: 'FontRegular'
+      font-size: $md-sys-typescale-display-large-font-size
+    .modal__alert-text
+      font-family: 'FontRegular'
+      font-size: $md-sys-typescale-body-medium-font-size
+    .modal__alert-button--cancel
+      position: relative
+      display: flex
+      justify-content: center
+      align-items: center
+      font-size: $md-sys-typescale-body-medium-font-size
+      color: $md-sys-color-primary-light
+      background-color: transparent
+      border: 1px solid $md-sys-color-outline-light
+      border-radius: 12px
+      padding: 1rem 2.4rem
+      cursor: pointer
+      &:hover .state-layer
+        opacity: 1
+      .state-layer
+        position: absolute
+        width: 100%
+        height: 100%
+        border-radius: 12px
+        opacity: 0
+        background-color: rgba($md-sys-color-primary-light, 0.08)
+
+.inactive
+  display: none

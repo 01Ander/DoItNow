@@ -1,4 +1,4 @@
-import { mainButton, modal, modalButtonCancel } from './vars.js';
+import { mainButton, modal, modalButtonCancel, textArea } from './vars.js';
 
 mainButton.addEventListener('click', openModal);
 modalButtonCancel.addEventListener('click', closeModal);
@@ -6,6 +6,7 @@ modalButtonCancel.addEventListener('click', closeModal);
 function openModal() {
   console.log('openModal');
   modal.classList.remove('inactive');
+  textArea.value = '';
 }
 
 function closeModal() {
