@@ -58,21 +58,8 @@ function checkedTask(id) {
   localStorage.setItem('tasks', JSON.stringify(newTasks));
 }
 
-// read how many tasks are in the array and how many are done
-function readTasks() {
-  const tasks = getTasks();
-  const tasksDone = tasks.filter((task) => task.done === true);
-  const tasksNotDone = tasks.filter((task) => task.done === false);
-  const tasksDoneLength = tasksDone.length;
-  const tasksNotDoneLength = tasksNotDone.length;
-  const tasksLength = tasks.length;
-  return {
-    tasksDoneLength,
-    tasksNotDoneLength,
-    tasksLength,
-  };
-}
 
 
-export { addTask, getTasks, deleteTask, checkedTask, readTasks };
+
+export { addTask, getTasks, deleteTask, checkedTask };
 
