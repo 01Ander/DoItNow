@@ -1,3 +1,4 @@
+import { showOptions } from './_form.js';
 import { mainButton, modal, modalButtonCancel, textArea } from './vars.js';
 
 mainButton.addEventListener('click', openModal);
@@ -9,6 +10,7 @@ function openModal() {
   textArea.value = '';
   textArea.setAttribute('id','modal__input')
   textArea.placeholder='Add yor new task';
+  showOptions();
 }
 
 function closeModal() {
