@@ -27,12 +27,17 @@
     &:hover
       background-color:  rgba($md-sys-color-on-surface-light , 0.08)
       cursor: pointer
-    &-text
+    .data-container
       width: calc(100% - 100px)
       display: flex
       align-items: center
-      font-size: $md-sys-typescale-body-large-font-size
-      color: $md-sys-color-on-surface-light
+      justify-content: space-between
+      .main__item-text,.main__item-date
+        color: $md-sys-color-on-surface-light
+        font-size: $md-sys-typescale-body-large-font-size
+        line-height: $md-sys-typescale-body-large-line-height
+      .main__item-priority
+        font-size: $md-sys-typescale-body-small-font-size
     .icon-delete__container
       width: 24px
       height: 24px
@@ -74,3 +79,23 @@
 
 .checked
   text-decoration: line-through
+
+.decoration
+  padding: 2px
+  border-radius: 4px
+
+.Important
+  background-color: $md-ref-palette-tertiary10
+  color: $md-ref-palette-primary90
+.High
+  background-color: $md-ref-palette-tertiary30
+  color: $md-ref-palette-primary70
+.Medium
+  background-color: $md-ref-palette-tertiary50
+  color: $md-sys-color-on-primary-light
+.Low
+  background-color: $md-ref-palette-tertiary70
+  color: $md-ref-palette-primary30
+.Optional
+  background-color: $md-ref-palette-tertiary90
+  color: $md-ref-palette-primary10

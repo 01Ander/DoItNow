@@ -1,5 +1,5 @@
 import { renderTask } from "./_renderData";
-import { addButton, modal, textArea } from "./vars";
+import { addButton, modal, textArea, date, input } from "./vars";
 import { modalALert } from "./_modalAlert";
 import { progress } from "./_progress";
 import { v4 as uuidv4 } from 'uuid';
@@ -8,22 +8,37 @@ import '../sass/modules/_vars.sass'
 addButton.addEventListener('click', (e) => {
   e.preventDefault();
   const text = textArea.value;
+  const dateTask = date.value;
+  const priority = input.value;
   const task = {
     text,
+    dateTask,
+    priority,
     done: false,
     id: uuidv4(),
   };
-  //not add empty task
-  if (text === '') {
-    textArea.placeholder = 'Be careful, you can not add an empty task';
-    textArea.id = 'modal__input--error';
-    console.log('empty task');
-    setTimeout(() => {
-      textArea.id = 'modal__input';
-    }, 2000);
-    return;
+  switch (true) {
+    case text === '':
+      textArea.placeholder = 'Be careful, you can not add an empty task';
+      textArea.id = 'error';
+      setTimeout(() => {
+        textArea.id = 'modal__input';
+      }, 2000);
+      return;
+    case dateTask === '':
+      date.id = 'error';
+      setTimeout(() => {
+        date.id = 'modal__input';
+      }, 2000);
+      return;
+    case priority === '':
+      input.placeholder = 'Be careful, you can not add an empty task';
+      input.id = 'error';
+      setTimeout(() => {
+        input.id = 'modal__input';
+      }, 2000);
+      return;
   }
-
   addTask(task);
   modal.classList.add('inactive');
   const newTasks = getTasks();
@@ -70,9 +85,4 @@ function checkedTask(id) {
   localStorage.setItem('tasks', JSON.stringify(newTasks));
 }
 
-
-
-
-
 export { addTask, getTasks, deleteTask, checkedTask };
-

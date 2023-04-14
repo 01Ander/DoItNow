@@ -12,6 +12,7 @@ const searchInput = document.querySelector('.main__input');
 const listOptions = document.querySelector('.list');
 const input = document.querySelector('.list__input');
 const options = document.querySelectorAll('.list__option');
+const date = document.querySelector('.date__input');
 
 
 export {
@@ -29,4 +30,5 @@ export {
   listOptions,
   input,
   options,
+  date,
 };

@@ -15,7 +15,13 @@ function renderTask(tasks) {
       <input type="checkbox" class="main__item-checkbox">
       <span class="checkbox-hover"></span>
     </div>
-    <p class="main__item-text">${task.text}</p>
+    <div class="data-container">
+      <div class="text-container">
+        <p class="main__item-priority ${task.priority} decoration">${task.priority}</p>
+        <p class="main__item-text">${task.text}</p>
+      </div>
+      <p class="main__item-date">${task.dateTask}</p>
+    </div>
     <div class="icon-delete__container">
       <span class="main__item-icon-delete"></span>
     </div>
