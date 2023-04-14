@@ -36,7 +36,25 @@
       <div class="modal__container">
         <h2 class="modal__title">Add task</h2>
         <form class="modal__form">
-          <textarea class="modal__input" placeholder="Add your new task"/></textarea>
+          <div class="modal__form--description">
+            <input class="description__input" id="" placeholder="Add your new task"/>
+            <label class="description__label" for="text">Description</label>
+          </div>
+          <div class="modal__form--date">
+            <label class="date__label" for="date">End date</label>
+            <input class="date__input" type="date" id="date" data-role="calendarpicker"/>
+          </div>
+          <div class="modal__form--list">
+            <label class="list__label" for="list">Priority</label>
+            <input class="list__input" list="list" placeholder="Add your priority"/>
+            <ul id="inactive" class="list">
+              <li>Important</li>
+              <li>High</li>
+              <li>Medium</li>
+              <li>Low</li>
+              <li>Opcional</li>
+            </ul>
+          </div>
         </form>
         <div class="modal__container--buttons">
           <button class="modal__button--cancel">

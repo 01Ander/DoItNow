@@ -17,22 +17,79 @@
     padding: 24px
     display: flex
     flex-direction: column
-    gap: 24px
+    gap: 40px
     border-radius: 24px
-    background-color: $md-sys-color-surface-container-high-light
+    background-color: $md-sys-color-surface-container-light
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15)
     .modal__title
       font-size: $md-sys-typescale-headline-small-font-size
     .modal__form
-      .modal__input
-        width: calc( 100% - 3.2rem )
-        resize: none
-        min-height: 100px
-        border-radius: 12px
-        border: none
-        font-family: 'FontRegular'
-        padding: 1.6rem
-        transition: all 0.3s ease-in-out
+      display: flex
+      flex-direction: column
+      gap: 24px
+      &--description
+        position: relative
+        height: 56px
+        .description__input
+          width: calc( 100% - 3.2rem )
+          padding: 1.6rem
+          border: 1px solid $md-sys-color-outline-light
+          border-radius: 12px
+          font-family: 'FontRegular'
+          font-size: $md-sys-typescale-body-large-font-size
+          background-color: $md-sys-color-surface-container-light
+          &:focus-visible
+            outline: none
+            border: 2px solid $md-sys-color-primary-light
+        .description__label
+          position: absolute
+          padding: 2px 4px
+          top: -8px
+          left: 16px
+          background-color: $md-sys-color-surface-container-light
+          font-size: $md-sys-typescale-body-small-font-size
+      &--date
+        position: relative
+        height: 56px
+        .date__input
+          width: calc( 100% - 3.2rem )
+          padding: 1.6rem
+          border: 1px solid $md-sys-color-outline-light
+          border-radius: 12px
+          font-family: 'FontRegular'
+          font-size: $md-sys-typescale-body-large-font-size
+          background-color: $md-sys-color-surface-container-light
+          &:focus-visible
+            outline: none
+            border: 2px solid $md-sys-color-primary-light
+        .date__label
+          position: absolute
+          padding: 2px 4px
+          top: -8px
+          left: 16px
+          background-color: $md-sys-color-surface-container-light
+          font-size: $md-sys-typescale-body-small-font-size
+      &--list
+        position: relative
+        height: 56px
+        .list__input
+          width: calc( 100% - 3.2rem )
+          padding: 1.6rem
+          border: 1px solid $md-sys-color-outline-light
+          border-radius: 12px
+          font-family: 'FontRegular'
+          font-size: $md-sys-typescale-body-large-font-size
+          background-color: $md-sys-color-surface-container-light
+          &:focus-visible
+            outline: none
+            border: 2px solid $md-sys-color-primary-light
+        .list__label
+          position: absolute
+          padding: 2px 4px
+          top: -8px
+          left: 16px
+          background-color: $md-sys-color-surface-container-high-light
+          font-size: $md-sys-typescale-body-small-font-size
     .modal__container--buttons
       display: flex
       justify-content: end
@@ -85,10 +142,27 @@
           height: 100%
           border-radius: 12px
           background-color: rgba( $md-sys-color-on-primary-light, 0.08 )
-.inactive
+
+.list
+  position: relative
+  display: flex
+  flex-direction: column
+  background-color: $md-sys-color-surface-container-light
+  border-radius: 12px
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15)
+  z-index: 1
+  transition: all 0.5s ease-in-out
+  li
+    padding: 1.6rem 0.8rem
+    font-size: $md-sys-typescale-body-large-font-size
+    cursor: pointer
+    &:hover
+      background-color: $md-sys-color-surface-container-highest-light
+      border-radius: 12px
+
+#inactive
   display: none
 
-#modal__input--error
-  background-color: $md-sys-color-on-error-container-light
-  &::placeholder
-    color: $md-sys-color-error-container-light
+#error
+  border: 2px solid $md-sys-color-error-light
+  color: $md-sys-color-error-light
