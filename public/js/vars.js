@@ -8,6 +8,7 @@ const textItem = document.querySelectorAll('.main__item-text');
 const textArea = document.querySelector('.modal__input');
 const addButton = document.querySelector('.modal__button--added');
 const list = document.querySelector('.main__list');
+const searchInput = document.querySelector('.main__input');
 
 
 export {
@@ -21,4 +22,5 @@ export {
   textArea,
   addButton,
   list,
+  searchInput,
 };

@@ -73,5 +73,6 @@ function checkedTask(id) {
 
 
 
+
 export { addTask, getTasks, deleteTask, checkedTask };
 

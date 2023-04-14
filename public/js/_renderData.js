@@ -1,12 +1,11 @@
-import { checkedTask, getTasks } from './_localStorage.js';
+import { checkedTask } from './_localStorage.js';
 import { configureIconDelete } from './_icon-delete.js';
 import { list } from './vars.js';
 import { deleteTask } from './_localStorage.js';
 import { progress } from './_progress.js';
 
 
-function renderTask() {
-  const tasks = getTasks();
+function renderTask(tasks) {
   list.innerHTML = '';
   tasks.forEach((task) => {
     const li = document.createElement('li');

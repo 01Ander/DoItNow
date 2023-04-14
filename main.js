@@ -4,13 +4,16 @@ import { progress } from './public/js/_progress';
 import './public/js/_modal';
 import './public/js/_check';
 import './public/js/_localStorage';
+import './public/js/_search';
 import './public/sass/_style.sass'
+import { getTasks } from './public/js/_localStorage';
 
 
 
 function initApp() {
   configureIconPlus();
-  renderTask();
+  const tasks = getTasks();
+  renderTask(tasks);
   progress();
 }
 
