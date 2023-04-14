@@ -21,6 +21,7 @@ function renderTask() {
     </div>
     `;
     list.appendChild(li);
+
     const deleteTaskIcon = li.querySelector('.main__item-icon-delete');
     deleteTaskIcon.addEventListener('click', () => {
       console.log('delete');

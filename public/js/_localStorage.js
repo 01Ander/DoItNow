@@ -33,17 +33,14 @@ function getTasks() {
 
 function deleteTask(id) {
   const tasks = getTasks();
-  const newTasks = tasks.filter((task) => {
-    if (task.id === id && task.done === true) {
-      return false;
-    } else {
-      // alert('You can delete only checked tasks');
-      //include modal window
-      modalALert();
-      return true;
-    }
-  } );
-  localStorage.setItem('tasks', JSON.stringify(newTasks));
+  const taskToDelete = tasks.find((task) => task.id === id);
+  if (taskToDelete.done === true) {
+    const newTasks = tasks.filter((task) => task.id !== id);
+    localStorage.setItem('tasks', JSON.stringify(newTasks));
+    renderTask();
+  } else {
+    modalALert();
+  }
 }
 
 function checkedTask(id) {
