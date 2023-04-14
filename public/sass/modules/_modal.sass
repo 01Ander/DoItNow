@@ -32,6 +32,7 @@
         border: none
         font-family: 'FontRegular'
         padding: 1.6rem
+        transition: all 0.3s ease-in-out
     .modal__container--buttons
       display: flex
       justify-content: end
@@ -86,3 +87,8 @@
           background-color: rgba( $md-sys-color-on-primary-light, 0.08 )
 .inactive
   display: none
+
+#modal__input--error
+  background-color: $md-sys-color-on-error-container-light
+  &::placeholder
+    color: $md-sys-color-error-container-light
