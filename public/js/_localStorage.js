@@ -1,6 +1,7 @@
 import { renderTask } from "./_renderData";
 import { addButton, modal, textArea } from "./vars";
 import { modalALert } from "./_modalAlert";
+import { progress } from "./_progress";
 import { v4 as uuidv4 } from 'uuid';
 
 addButton.addEventListener('click', (e) => {
@@ -15,6 +16,7 @@ addButton.addEventListener('click', (e) => {
   console.log(task);
   modal.classList.add('inactive');
   renderTask();
+  progress();
 });
 
 function addTask(task) {
@@ -56,5 +58,21 @@ function checkedTask(id) {
   localStorage.setItem('tasks', JSON.stringify(newTasks));
 }
 
-export { addTask, getTasks, deleteTask, checkedTask };
+// read how many tasks are in the array and how many are done
+function readTasks() {
+  const tasks = getTasks();
+  const tasksDone = tasks.filter((task) => task.done === true);
+  const tasksNotDone = tasks.filter((task) => task.done === false);
+  const tasksDoneLength = tasksDone.length;
+  const tasksNotDoneLength = tasksNotDone.length;
+  const tasksLength = tasks.length;
+  return {
+    tasksDoneLength,
+    tasksNotDoneLength,
+    tasksLength,
+  };
+}
+
+
+export { addTask, getTasks, deleteTask, checkedTask, readTasks };
 

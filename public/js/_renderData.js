@@ -2,7 +2,8 @@ import { checkedTask, getTasks } from './_localStorage.js';
 import { configureIconDelete } from './_icon-delete.js';
 import { list } from './vars.js';
 import { deleteTask } from './_localStorage.js';
-import { modalALert } from './_modalAlert.js';
+import { progress } from './_progress.js';
+
 
 function renderTask() {
   const tasks = getTasks();
@@ -27,6 +28,7 @@ function renderTask() {
       console.log('delete');
       deleteTask(task.id);
       renderTask();
+      progress();
     });
 
     const checkbox = li.querySelector('.main__item-checkbox');
@@ -41,6 +43,7 @@ function renderTask() {
         p.classList.remove('checked');
         checkedTask(task.id);
       }
+      progress();
     } );
 
     if (task.done) {
