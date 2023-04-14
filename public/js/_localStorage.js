@@ -25,9 +25,9 @@ addButton.addEventListener('click', (e) => {
   }
 
   addTask(task);
-  console.log(task);
   modal.classList.add('inactive');
-  renderTask();
+  const newTasks = getTasks();
+  renderTask( newTasks );
   progress();
 });
 
@@ -51,7 +51,7 @@ function deleteTask(id) {
   if (taskToDelete.done === true) {
     const newTasks = tasks.filter((task) => task.id !== id);
     localStorage.setItem('tasks', JSON.stringify(newTasks));
-    renderTask();
+    renderTask(newTasks);
   } else {
     modalALert();
   }

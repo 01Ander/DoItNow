@@ -9,12 +9,10 @@ function searchTask(value) {
     const valueText = value.toLowerCase();
     return taskText.includes(valueText);
   });
-  console.log(searchedTasks);
   renderTask(searchedTasks);
 }
 
 searchInput.addEventListener("input", (e) => {
   searchTask(e.target.value);
-  console.log(e.target.value);
 });
 

@@ -12,21 +12,18 @@ function progress() {
     case tasksLength === 0:
       progressText.textContent = "You have no tasks";
       progressMainContainer.classList.add('inactive')
-      console.log('no task');
       break;
     case (tasksLength !== 0 && progressWidth !== 100):
       progressText.textContent = `You have completed ${tasksDoneLength} of ${tasksLength} tasks`;
       progressMainContainer.classList.remove('inactive')
       progressContainer.style.width = `${progressWidth}%`;
       progressContainer.classList.remove("progress__bar--completed");
-      console.log('with task');
       break;
     case (progressWidth === 100 && (tasksDoneLength === tasksLength)):
       progressText.textContent = "You have completed all your tasks";
       progressMainContainer.classList.remove('inactive')
       progressContainer.style.width = `${progressWidth}%`;
       progressContainer.classList.add("progress__bar--completed");
-      console.log('all task done');
       break;
     default:
       break;

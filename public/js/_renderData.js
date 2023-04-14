@@ -24,9 +24,7 @@ function renderTask(tasks) {
 
     const deleteTaskIcon = li.querySelector('.main__item-icon-delete');
     deleteTaskIcon.addEventListener('click', () => {
-      console.log('delete');
       deleteTask(task.id);
-      renderTask();
       progress();
     });
 
@@ -34,11 +32,9 @@ function renderTask(tasks) {
     checkbox.addEventListener('change', () => {
       const p = checkbox.parentNode.nextElementSibling;
       if (checkbox.checked) {
-        console.log('checked');
         p.classList.add('checked');
         checkedTask(task.id);
       } else {
-        console.log('unchecked');
         p.classList.remove('checked');
         checkedTask(task.id);
       }
