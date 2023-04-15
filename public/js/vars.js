@@ -14,6 +14,9 @@ const input = document.querySelector('.list__input');
 const options = document.querySelectorAll('.list__option');
 const date = document.querySelector('.date__input');
 const priorityInput = document.querySelector('.list__input');
+const attentionDescription = document.querySelector('.attention__description');
+const attentionDate = document.querySelector('.attention__date');
+const attentionPriority = document.querySelector('.attention__priority');
 
 
 export {
@@ -33,4 +36,7 @@ export {
   options,
   date,
   priorityInput,
+  attentionDescription,
+  attentionDate,
+  attentionPriority,
 };
