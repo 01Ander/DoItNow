@@ -20,6 +20,12 @@
       <main class="main">
         <form class="main__form">
           <input type="text" name="task" class="main__input" placeholder="Find your task by description or priority or date"/>
+          <button class="main__button--edit" type="button">
+            <div class="container__button--icon">
+              <span class="button__icon--edit"></span>
+            </div>
+            <span class="button-hover"></span>
+          </button>
         </form>
         <ul class="main__list">
         </ul>
@@ -44,7 +50,7 @@
             </div>
             <div class="modal__form--date">
               <label class="date__label" for="date">End date</label>
-              <input class="date__input" type="date" id="date" data-role="calendarpicker"/>
+              <input class="date__input" type="date" id="date" />
               <p class="attention attention__date"></p>
             </div>
             <div class="modal__form--list">

@@ -1,6 +1,48 @@
 .main
   padding: 0 16px
   font-family: 'FontRegular'
+  &__form
+    display: flex
+    gap: 16px
+    justify-content: space-between
+    align-items: center
+    .main__button--edit
+      position: relative
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 56px
+      height: 56px
+      border: none
+      border-radius: 12px
+      background-color: $md-sys-color-primary-container-light
+      box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px rgba(0, 0, 0, 0.3)
+      &:hover
+        box-shadow: 0px 6px 10px 4px rgba(0, 0, 0, 0.15), 0px 2px 3px rgba(0, 0, 0, 0.3)
+      .button-hover
+        opacity: 0
+        position: absolute
+        width: 56px
+        height: 56px
+        border-radius: 12px
+        background-color: rgba($md-sys-color-on-primary-container-light, 0.08)
+        cursor: pointer
+        &:hover
+          opacity: 1
+      .container__button--icon
+        width: 56px
+        height: 56px
+        position: absolute
+        display: flex
+        justify-content: center
+        align-items: center
+        .button__icon--edit
+          position: block
+          width: 16px
+          height: 16px
+          background-size: cover
+          background-repeat: no-repeat
+          background-position: center
   &__input
     width: calc(100% - 32px)
     margin-top: 24px

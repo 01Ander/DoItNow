@@ -8,9 +8,11 @@ import './public/js/_search';
 import './public/sass/_style.sass'
 import { getTasks } from './public/js/_localStorage';
 import { showModal } from './public/js/_mediaQueryModal';
+import { configureIconEdit } from './public/js/_icon-edit';
 
 function initApp() {
   configureIconPlus();
+  configureIconEdit();
   const tasks = getTasks();
   renderTask(tasks);
   progress();

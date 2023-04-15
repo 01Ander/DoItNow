@@ -5,8 +5,7 @@ import { progress } from "./_progress";
 import { v4 as uuidv4 } from 'uuid';
 import '../sass/modules/_vars.sass'
 import { closeModal } from "./_mediaQueryModal";
-import { optionValue, showOptions } from "./_form";
-
+import { showOptions } from "./_form";
 
 addButton.addEventListener('click', (e) => {
   e.preventDefault();
@@ -14,16 +13,10 @@ addButton.addEventListener('click', (e) => {
   const text = textArea.value;
   const dateTask = date.value;
   const priority = input.value;
-
   const actualDate = new Date();
   const actualDateFormatted = actualDate.toISOString().slice(0, 10);
-  console.log('actualDateFormatted', actualDateFormatted);
-  console.log('dateTask', dateTask);
-
   const dateTaskNumber = Number(dateTask.split('-').join(''));
   const actualDateNumber = Number(actualDateFormatted.split('-').join(''));
-  console.log('dateTaskNumber', dateTaskNumber);
-  console.log('actualDateNumber', actualDateNumber);
 
   const task = {
     text,
@@ -91,6 +84,21 @@ addButton.addEventListener('click', (e) => {
     return;
   }
 
+  const tasks = getTasks();
+  const taskExists = tasks.find((task) => task.text === text && task.dateTask === dateTask);
+  if (taskExists) {
+    attentionDescription.innerText= 'Be careful, you can not add a task with the same text and date';
+    attentionDate.innerText= 'Be careful, you can not add a task with the same text and date';
+    textArea.id = 'error';
+    setTimeout(() => {
+      attentionDescription.innerText= '';
+      attentionDate.innerText= '';
+      textArea.id = 'modal__input';
+      date.id = 'modal__input';
+    }, 5000);
+
+    return;
+  }
 
   closeModal();
   addTask(task);

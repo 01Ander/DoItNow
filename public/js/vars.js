@@ -1,4 +1,5 @@
 const iconPlus = document.querySelector('.button--icon');
+const iconEdit = document.querySelector('.button__icon--edit');
 
 const mainButton = document.querySelector('.main__button');
 const modal = document.querySelector('.modal');
@@ -39,4 +40,5 @@ export {
   attentionDescription,
   attentionDate,
   attentionPriority,
+  iconEdit,
 };
