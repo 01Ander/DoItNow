@@ -4,6 +4,8 @@ import { modalALert } from "./_modalAlert";
 import { progress } from "./_progress";
 import { v4 as uuidv4 } from 'uuid';
 import '../sass/modules/_vars.sass'
+import { closeModal } from "./_mediaQueryModal";
+
 
 addButton.addEventListener('click', (e) => {
   e.preventDefault();
@@ -39,11 +41,14 @@ addButton.addEventListener('click', (e) => {
       }, 2000);
       return;
   }
+  closeModal();
   addTask(task);
-  modal.classList.add('inactive');
   const newTasks = getTasks();
   renderTask( newTasks );
   progress();
+  textArea.value = '';
+  date.value = '';
+  input.value = '';
 });
 
 function addTask(task) {

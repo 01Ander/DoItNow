@@ -20,7 +20,7 @@ function progress() {
       progressContainer.classList.remove("progress__bar--completed");
       break;
     case (progressWidth === 100 && (tasksDoneLength === tasksLength)):
-      progressText.textContent = "You have completed all your tasks";
+      progressText.textContent = "Congratulations! You have completed all your tasks";
       progressMainContainer.classList.remove('inactive')
       progressContainer.style.width = `${progressWidth}%`;
       progressContainer.classList.add("progress__bar--completed");
