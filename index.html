@@ -6,7 +6,7 @@
     <title>DoItNow</title>
   </head>
   <body>
-    <div class="circle circle_up"></div>
+    <!-- <div class="circle circle_up"></div> -->
     <header class="header">
       <h1 class="header__title">DoItNow</h1>
       <section class="progress__container">
@@ -16,57 +16,59 @@
         </div>
       </section>
     </header>
-    <main class="main">
-      <form class="main__form">
-        <input type="text" name="task" class="main__input" placeholder="Find your task by description or priority or date"/>
-      </form>
-      <ul class="main__list">
-      </ul>
-      <div class="main__container--button">
-        <button class="main__button">
-          <div class="container__button--icon">
-            <span class="button--icon"></span>
-          </div>
-          <span class="button-hover"></span>
-        </button>
-      </div>
-      <!-- Modal for add task -->
-    </main>
-    <section class="modal inactive">
-      <div class="modal__container">
-        <h2 class="modal__title">Add task</h2>
-        <form class="modal__form">
-          <div class="modal__form--description">
-            <input class="description__input" id="" placeholder="Add your new task"/>
-            <label class="description__label" for="text">Description</label>
-          </div>
-          <div class="modal__form--date">
-            <label class="date__label" for="date">End date</label>
-            <input class="date__input" type="date" id="date" data-role="calendarpicker"/>
-          </div>
-          <div class="modal__form--list">
-            <label class="list__label" for="list">Priority</label>
-            <input class="list__input" list="list" placeholder="Add your priority"/>
-            <ul id="inactive" class="list">
-              <li class="list__option ">Important</li>
-              <li class="list__option ">High</li>
-              <li class="list__option ">Medium</li>
-              <li class="list__option ">Low</li>
-              <li class="list__option ">Optional</li>
-            </ul>
-          </div>
+    <section class="high__container">
+      <main class="main">
+        <form class="main__form">
+          <input type="text" name="task" class="main__input" placeholder="Find your task by description or priority or date"/>
         </form>
-        <div class="modal__container--buttons">
-          <button class="modal__button--cancel">
-            <span class="state-layer"></span>
-            Cancel
-          </button>
-          <button class="modal__button--added" type="submit">
-            <span class="state-layer"></span>
-            Add task
+        <ul class="main__list">
+        </ul>
+        <div class="main__container--button">
+          <button class="main__button">
+            <div class="container__button--icon">
+              <span class="button--icon"></span>
+            </div>
+            <span class="button-hover"></span>
           </button>
         </div>
-      </div>
+        <!-- Modal for add task -->
+      </main>
+      <section class="modal inactive">
+        <div class="modal__container">
+          <h2 class="modal__title">Add task</h2>
+          <form class="modal__form">
+            <div class="modal__form--description">
+              <input class="description__input" id="" placeholder="Add your new task"/>
+              <label class="description__label" for="text">Description</label>
+            </div>
+            <div class="modal__form--date">
+              <label class="date__label" for="date">End date</label>
+              <input class="date__input" type="date" id="date" data-role="calendarpicker"/>
+            </div>
+            <div class="modal__form--list">
+              <label class="list__label" for="list">Priority</label>
+              <input class="list__input" list="list" placeholder="Add your priority"/>
+              <ul id="inactive" class="list">
+                <li class="list__option ">Important</li>
+                <li class="list__option ">High</li>
+                <li class="list__option ">Medium</li>
+                <li class="list__option ">Low</li>
+                <li class="list__option ">Optional</li>
+              </ul>
+            </div>
+          </form>
+          <div class="modal__container--buttons">
+            <button class="modal__button--cancel">
+              <span class="state-layer"></span>
+              Cancel
+            </button>
+            <button class="modal__button--added" type="submit">
+              <span class="state-layer"></span>
+              Add task
+            </button>
+          </div>
+        </div>
+      </section>
     </section>
     <section class="modal__alert inactive">
       <div class="modal__alert-container">

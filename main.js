@@ -7,15 +7,20 @@ import './public/js/_localStorage';
 import './public/js/_search';
 import './public/sass/_style.sass'
 import { getTasks } from './public/js/_localStorage';
-
-
+import { showModal } from './public/js/_mediaQueryModal';
 
 function initApp() {
   configureIconPlus();
   const tasks = getTasks();
   renderTask(tasks);
   progress();
+  const mediaQuery = window.innerWidth
+  showModal(mediaQuery)
 }
 
 document.addEventListener('DOMContentLoaded', initApp());
+
+
+
+
 
