@@ -13,6 +13,7 @@ const listOptions = document.querySelector('.list');
 const input = document.querySelector('.list__input');
 const options = document.querySelectorAll('.list__option');
 const date = document.querySelector('.date__input');
+const priorityInput = document.querySelector('.list__input');
 
 
 export {
@@ -31,4 +32,5 @@ export {
   input,
   options,
   date,
+  priorityInput,
 };
