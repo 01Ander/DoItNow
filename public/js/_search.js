@@ -5,14 +5,21 @@ import { searchInput } from "./vars.js";
 function searchTask(value) {
   const tasks = getTasks();
   const searchedTasks = tasks.filter((task) => {
-    const taskText = task.text.toLowerCase();
     const valueText = value.toLowerCase();
-    return taskText.includes(valueText);
+    const taskText = task.text.toLowerCase();
+    const taskPriority = task.priority.toLowerCase();
+    const taskDate = task.dateTask;
+    return (
+      taskText.includes(valueText) ||
+      taskDate.includes(valueText) ||
+      taskPriority.includes(valueText)
+    );
   });
   renderTask(searchedTasks);
 }
 
 searchInput.addEventListener("input", (e) => {
+  console.log(e.target.value);
   searchTask(e.target.value);
 });
 
