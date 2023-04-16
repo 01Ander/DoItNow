@@ -232,5 +232,4 @@ function addNewTask() {
 }
 
 
-
 export { openModal };
