@@ -18,6 +18,7 @@ const priorityInput = document.querySelector('.list__input');
 const attentionDescription = document.querySelector('.attention__description');
 const attentionDate = document.querySelector('.attention__date');
 const attentionPriority = document.querySelector('.attention__priority');
+const buttonEdit = document.querySelector('.main__button--edit');
 
 
 export {
@@ -41,4 +42,5 @@ export {
   attentionDate,
   attentionPriority,
   iconEdit,
+  buttonEdit,
 };

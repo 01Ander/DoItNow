@@ -9,6 +9,7 @@ import './public/sass/_style.sass'
 import { getTasks } from './public/js/_localStorage';
 import { showModal } from './public/js/_mediaQueryModal';
 import { configureIconEdit } from './public/js/_icon-edit';
+import './public/js/_editTasks';
 
 function initApp() {
   configureIconPlus();
